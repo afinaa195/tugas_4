@@ -1,0 +1,293 @@
+/* ================================================
+   style.css - File CSS untuk Profil Pribadi Saya
+   Tema: Hitam Putih (Sederhana)
+   ================================================ */
+
+
+/* ===== PENGATURAN DASAR ===== */
+
+/* Reset margin dan padding bawaan browser */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk seluruh halaman */
+body {
+    background-color: #d7c9c9;  /* latar belakang putih */
+    color: #111111;             /* warna teks hitam */
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ===== HEADER ===== */
+
+.header {
+    background-color: #111111;  /* latar hitam */
+    color: #ffffff;             /* teks putih */
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 4px solid #333333;
+}
+
+.header h1 {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.subjudul {
+    font-size: 14px;
+    color: #aaaaaa;
+    margin-top: 5px;
+}
+
+
+/* ===== KONTEN UTAMA ===== */
+/* Menggunakan Flexbox agar kartu-kartu tersusun rapi */
+
+.konten-utama {
+    display: flex;          /* aktifkan flexbox */
+    flex-direction: column; /* susun ke bawah secara default */
+    gap: 24px;              /* jarak antar bagian */
+    max-width: 800px;       /* lebar maksimal halaman */
+    margin: 30px auto;      /* tengahkan halaman */
+    padding: 0 16px;        /* jarak kiri-kanan */
+}
+
+
+/* ===== KARTU / SECTION ===== */
+
+.kartu {
+    border: 2px solid #111111;  /* garis hitam */
+    padding: 24px;
+    background-color: #fafafa;  /* putih terang */
+}
+
+.kartu h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.kartu h3 {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+
+/* ===== BAGIAN PROFIL ===== */
+/* Menggunakan Flexbox untuk foto dan teks berjajar */
+
+#bagian-profil {
+    display: flex;          /* foto dan teks berjajar */
+    align-items: center;    /* rata tengah secara vertikal */
+    gap: 24px;              /* jarak antara foto dan teks */
+    flex-wrap: wrap;        /* bungkus jika layar sempit */
+}
+
+/* Foto profil */
+.foto {
+    border: 3px solid #111111;
+    display: block;
+    object-fit: cover;      /* foto tidak melebar/menciut aneh */
+    flex-shrink: 0;         /* foto tidak mengecil */
+    background-color: #dddddd; /* warna abu jika foto tidak ada */
+}
+
+/* Teks identitas */
+.teks-identitas {
+    margin-bottom: 8px;
+}
+
+
+/* ===== TABEL BIODATA ===== */
+
+.tabel {
+    width: 100%;
+    border-collapse: collapse;  /* gabungkan garis tabel */
+}
+
+.tabel th,
+.tabel td {
+    border: 1px solid #999999;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.tabel th {
+    background-color: #111111;  /* header tabel hitam */
+    color: #ffffff;             /* teks putih */
+    width: 35%;
+}
+
+/* Baris genap diberi warna abu terang */
+.tabel tr:nth-child(even) td {
+    background-color: #eeeeee;
+}
+
+
+/* ===== DAFTAR HOBI ===== */
+
+.daftar-hobi,
+.daftar-aktivitas {
+    padding-left: 24px;     /* indentasi daftar */
+    margin-bottom: 8px;
+}
+
+.daftar-hobi li,
+.daftar-aktivitas li {
+    margin-bottom: 4px;
+}
+
+
+/* ===== FORM ===== */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Setiap baris form */
+.form-baris {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-baris label:first-child {
+    font-weight: bold;
+}
+
+/* Input teks */
+.input-teks {
+    padding: 8px 12px;
+    border: 2px solid #111111;
+    background-color: #ffffff;
+    font-size: 15px;
+    width: 100%;
+    max-width: 400px;
+    outline: none;
+}
+
+/* Efek saat input diklik */
+.input-teks:focus {
+    background-color: #f0f0f0;
+    border-color: #555555;
+}
+
+/* Grup radio dan checkbox */
+.grup-radio,
+.grup-checkbox {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.grup-radio label,
+.grup-checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* Tombol submit */
+.tombol {
+    width: fit-content;
+    padding: 10px 28px;
+    background-color: #111111;  /* hitam */
+    color: #ffffff;             /* teks putih */
+    border: 2px solid #111111;
+    font-size: 15px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+/* Efek tombol saat di-hover */
+.tombol:hover {
+    background-color: #ffffff;  /* balik: putih */
+    color: #111111;             /* teks hitam */
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer {
+    background-color: #111111;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+
+/* ================================================
+   MEDIA QUERY - Tampilan Responsif
+   ================================================ */
+
+/* ===== TABLET (lebar 600px ke atas) ===== */
+@media (min-width: 600px) {
+
+    .konten-utama {
+        padding: 0 24px;
+    }
+
+    /* Tabel biodata: kolom nama lebih kecil */
+    .tabel th {
+        width: 30%;
+    }
+
+}
+
+/* ===== DESKTOP (lebar 800px ke atas) ===== */
+@media (min-width: 800px) {
+
+    /* Bagian profil: foto kiri, teks kanan */
+    #bagian-profil {
+        flex-direction: row;
+    }
+
+    /* Input tidak terlalu lebar di desktop */
+    .input-teks {
+        max-width: 350px;
+    }
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+}
+
+/* ===== MOBILE (lebar 480px ke bawah) ===== */
+@media (max-width: 480px) {
+
+    /* Foto dan teks susun ke bawah di HP */
+    #bagian-profil {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Radio dan checkbox susun ke bawah */
+    .grup-radio,
+    .grup-checkbox {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+
+    .kartu {
+        padding: 16px;
+    }
+
+}
